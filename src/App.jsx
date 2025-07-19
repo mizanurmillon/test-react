@@ -20,6 +20,8 @@ function App() {
 
   const [toggle,setToggle]=useState(false);
 
+  const [count,setCount]=useState(1);
+
   return (
     <>
       <h2>Event Add Function Call</h2>
@@ -43,6 +45,17 @@ function App() {
 
       {
         toggle ? <User /> : null
+      }
+
+      <h1>{count}</h1>
+
+      <button onClick={()=>setCount(count+1)}>Count</button>
+
+      {
+        count==0?<h1>Condition 0</h1>
+        :count==1?<h1>Condition 1</h1>
+        :count==2?<h1>Condition 2</h1>
+        :<h1>Condition Other</h1>
       }
       
 
